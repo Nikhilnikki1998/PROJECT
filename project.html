@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <title>Nvidia</title>
+            <style>
+                
+            
+                .center{
+                    text-align: center;
+                }
+            body
+                {
+                        padding-top: 0;
+                    margin:0;
+                   
+                  
+                
+                   /* display:flex;*/
+                    justify-content:center;
+                    align-items: center;
+                    min-height: 200vh;
+                    background: #000000;
+                    font-family: sans-serif;
+                }
+                a{
+                    position: relative;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    color: #ededf8;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                    text-decoration: none;
+                    font-size: 50px;
+                    overflow: hidden;
+                    transition: 0.2s;
+                    
+                }   
+                    a:hover
+{
+    color: #fff7f7;
+    background:red;
+        box-shadow: 0 0 10px #f32121, 0 0 40px #f32121, 0 0 80px #f32121;
+        transition-delay: 2s;
+}
+a span
+{
+    position: absolute;
+    display: block;
+}
+a  span:nth-child(1)
+{
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg,transparent,#f32172);
+}   
+a:hover span:nth-child(1)
+{
+left: 100%;
+transition: 1.5s;
+}
+a  span:nth-child(3)
+{
+    bottom:0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg,transparent,#21f333);
+}   
+a:hover span:nth-child(3)
+{
+right: 100%;
+transition: 1s;
+transition-delay: 0.75s;
+}a  span:nth-child(2)
+{
+    top:-100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#7c21f3);
+}   
+a:hover span:nth-child(2)
+{
+top: 100%;
+transition: 1s;
+transition-delay: 0.45s;
+}
+a  span:nth-child(4)
+{
+    bottom:-100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#f3e521);
+}   
+a:hover span:nth-child(4)
+{
+bottom: 100%;
+transition: 1s;
+transition-delay: 0.95s;
+}
+p{
+    color: white;
+}
+h1
+{
+    color: white;
+
+}
+.graphics
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1vh;
+    background: #060c21;
+    font-family: sans-serif;
+}
+.box
+{
+    position: relative;
+    width: 2550px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background : #060c21;
+}
+.box:before
+{
+    content: '';
+    position: absolute;
+    top: 4px;   
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: #fff;
+    z-index: -1;
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: 4px;   
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+.content
+
+{
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+.box:before,
+.box:after
+{
+     background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4);
+     }
+.loader
+{
+    position: relative;
+    width: 150px;
+    height:150px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 40%,#e5f403);
+    animation: animate 2s linear infinite;
+
+}
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+
+    }
+        100%
+        {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+    
+}
+.loader:before
+{
+    content: '';
+    position : absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: #000;
+    border-radius: 50%;
+    z-index: 1000;
+
+}
+.loader:after
+{
+    content: '';
+    position : absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(45deg,transparent,transparent 40%,#e5f403);
+    border-radius: 50%;
+    z-index: 1000;
+    z-index: 1;
+    filter: blur(30px);
+
+}
+.btn
+{
+    border: 1px solid #f30101;
+    background: none;
+    /*padding: 10px 20px;*/
+    font-size: 20px;
+    font-family:monospace;
+    cursor: pointer;
+    margin: 232px;
+    transition: 0.8s;
+   position:sticky;
+    overflow: hidden;
+}
+.btn1,.btn2
+{
+    color: #fff6f6;
+
+}
+.btn3,.btn4
+{
+    color: #fff;
+}
+.btn1:hover,.btn2:hover{
+    color: #fff;
+}
+.btn3:hover,.btn4:hover
+{
+    color: #a56060;
+
+}
+.btn::before
+{
+    content: "";
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    background: #db3434;
+    z-index: -1;
+    transition: 1s;
+}
+.btn1::before,.btn2::before
+{
+    top: 0%;
+    border-radius: 0 0 50% 50%;
+}
+.btn3::before,.btn4::before
+{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    height: 280%;
+}
+.btn1:hover::before,.btn2:hover::before{
+    height: 280%;
+}
+.btn3:hover::before,.btn4:hover:before
+{
+    height: 0;
+}
+.container
+{
+    text-align: center;
+}
+.slidershow
+{
+width: 1900px;
+height: 900px;
+overflow: hidden;
+}
+.middle
+{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navigation
+{
+    position: absolute;
+    bottom: 10px;
+    left: 1000px;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar
+{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+
+}
+.bar:hover
+{
+    background: #fff;
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slidess
+{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slides
+{
+    width: 20%;
+    transition: 0.6s;
+}
+.slides img{
+    width: 100%;
+    height: 100%;
+
+}
+#r1:checked ~ .s1
+{
+margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+
+
+</style>
+    </head>
+    <body> 
+      <h1 class="center"> <a herf="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="logo.jpg" width="80"> NVIDIA 
+        </a></h1>
+        <hr>
+        <div class="box">
+            <div class="content">
+                <h1 class="graphics">NVIDIA DESCRIPTION</h1>
+                <p class="graphics">Nvidia Corporation is an American multinational technology company incorporated in Delaware and based
+                     in Santa Clara, California. It designs graphics processing units for the gaming and professional markets,
+                      as well as system on a chip units for the mobile computing and automotive market, Its primary GPU product line, labeled "GeForce", is in direct competition with Advanced Micro Devices' (AMD) "Radeon" products. Nvidia expanded its presence in the gaming industry with its handheld Shield Portable, Shield Tablet, and Shield Android TV.
+                      Since 2014,[citation needed] Nvidia has diversified its business focusing on four markets: gaming, professional visualization, data centers, and auto. Nvidia is also now focused on artificial intelligence.
+                      In addition to GPU manufacturing, Nvidia provides parallel processing capabilities to researchers and scientists that allow them to efficiently run high-performance applications. They are deployed in supercomputing sites around the world. More recently, it has moved into the mobile computing market, where it produces Tegra mobile processors for smartphones and tablets as well as vehicle navigation and entertainment systems. In addition to AMD, its competitors include Intel and Qualcomm.</p>
+                      </div>
+                      </div>
+                      <div class="slidershow">
+                          <div class="slidess">
+                              <input type="radio" name="r" id="r1" checked>
+                              <input type="radio" name="r" id="r2">
+                              <input type="radio" name="r" id="r3">
+                              <input type="radio" name="r" id="r4">
+                              <div class="slides s1">
+                              <img src="3080.png" alt="">
+                              </div>
+                          <div class="slides">
+                              <img src="2080.jpg" alt="">
+                          </div>
+                          <div class="slides">
+                              <img src="2070.jpg" alt="">
+                          </div>
+                          <div class="slides">
+                              <img src="1660.jpg" alt="">
+                          </div>
+                          <div class="navigation">
+                              <label for="r1" class="bar"></label>
+                              <label for="r2" class="bar"></label>
+                              <label for="r3" class="bar"></label>
+                              <label for="r4" class="bar"></label>
+
+                          </div>
+                      </div>
+                    </div>
+                      <div class="loader"></div>
+                      <div class="container">
+                          <button class="btn btn1">RTX 3080</button>
+                          <button class="btn btn2">RTX 2080 ti</button>
+                          <button class="btn btn3">RTX 2070</button>
+                          <button class="btn btn4">GTX 1660 Super</button>
+                      </div>
+
+    </body>
+</html>
