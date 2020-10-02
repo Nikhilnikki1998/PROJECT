@@ -1,0 +1,39 @@
+body
+                {
+                      
+                  
+                
+                
+                    
+                    
+                    
+                    background: #000000;
+                 
+                }
+                .p
+                {                    
+                    color: #ffffff;
+                    text-align: center;
+                }
+
+                p{
+                    color: #ffffff;
+                    font-size: 35px;
+                    text-align: center;
+                    font-style: italic;
+                }
+                .hmg{ 
+                    margin-top: -375px;
+                       margin-left: 1700px; 
+                }
+                .B{
+                    margin-top: -70px;
+                    text-align: right;
+                    color: #ffffff;
+                }
+                ul li
+{
+    display: inline-block;
+    margin: 5%;
+    text-align: center;
+}
